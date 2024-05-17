@@ -1,0 +1,642 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+}
+p,
+span {
+  font-family: var(--sec-font);
+}
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --sec-font: "Poppins", sans-serif;
+}
+/*navbar*/
+
+.bg-body 
+{
+  --bs-bg-opacity:0;
+  opacity: 0.9;
+  
+  margin: 0;
+}
+.navbar[data-bs-theme=dark]
+{
+  position: fixed;
+  z-index: 1000000;
+  font-family: var(--main-font);
+  --bs-navbar-color:black;
+  background-color: #999999 !important;
+  --bs-navbar-hover-color: white;
+  
+  
+  --bs-body-bg: #176ec6;
+}
+
+.navbar-brand
+{
+  color: white;
+  --bs-navbar-brand-hover-color: white;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  transition: all .3s;
+  opacity: 0;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 5px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover::after {
+
+  opacity: 1;
+
+}
+/* home */
+
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../imgs/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  h2 {
+    letter-spacing: 2px;
+    font-family: var(--main-font);
+  }
+  p {
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    font-family: var(--main-font);
+  }
+  .home-icons {
+    a {
+      text-decoration: none;
+      color: white;
+      i {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: 0 2px;
+        padding: 6px;
+      }
+    }
+  }
+}
+
+.home p::after {
+  content: "";
+  animation: typing 10s infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "Larry Daniels|";
+  }
+  1.5% {
+    content: "Larry Daniel|";
+  }
+  3% {
+    content: "Larry Danie|";
+  }
+  4.5% {
+    content: "Larry Dani|";
+  }
+  6% {
+    content: "Larry Dan|";
+  }
+  7.5% {
+    content: "Larry Da|";
+  }
+  9% {
+    content: "Larry D|";
+  }
+  10.5% {
+    content: "Larry |";
+  }
+  12% {
+    content: "Larry|";
+  }
+  13.5% {
+    content: "Larr|";
+  }
+  15% {
+    content: "Lar|";
+  }
+  16.5% {
+    content: "La|";
+  }
+  18% {
+    content: "L|";
+  }
+  19.5% {
+    content: "|";
+  }
+  21% {
+    content: "D|";
+  }
+  22.5% {
+    content: "De|";
+  }
+  24% {
+    content: "Dev|";
+  }
+  25.5% {
+    content: "Deve|";
+  }
+  27% {
+    content: "Devel|";
+  }
+  28.5% {
+    content: "Develo|";
+  }
+  30% {
+    content: "Develop|";
+  }
+  31.5% {
+    content: "Develope|";
+  }
+  33% {
+    content: "Developer|";
+  }
+  36% {
+    content: "Develope|";
+  }
+  37.5% {
+    content: "Develop|";
+  }
+  39% {
+    content: "Develo|";
+  }
+  40.5% {
+    content: "Devel|";
+  }
+  42% {
+    content: "Deve|";
+  }
+  43.5% {
+    content: "Dev|";
+  }
+  45% {
+    content: "De|";
+  }
+  46.5% {
+    content: "D|";
+  }
+  48% {
+    content: "|";
+  }
+  49.5% {
+    content: "D|";
+  }
+  51% {
+    content: "De|";
+  }
+  52.5% {
+    content: "Des|";
+  }
+  54% {
+    content: "Desi|";
+  }
+  55.5% {
+    content: "Desig|";
+  }
+  57% {
+    content: "Design|";
+  }
+  58.5% {
+    content: "Designe|";
+  }
+  60% {
+    content: "Designer|";
+  }
+  63% {
+    content: "Designe|";
+  }
+  64.5% {
+    content: "Design|";
+  }
+  66% {
+    content: "Desig|";
+  }
+  67.5% {
+    content: "Desi|";
+  }
+  69% {
+    content: "Des|";
+  }
+  70.5% {
+    content: "De|";
+  }
+  72% {
+    content: "D|";
+  }
+  73.5% {
+    content: "|";
+  }
+  76.5% {
+    content: "L|";
+  }
+  78% {
+    content: "La|";
+  }
+  80% {
+    content: "Lar|";
+  }
+  82% {
+    content: "Larr|";
+  }
+  84% {
+    content: "Larry|";
+  }
+  86% {
+    content: "Larry |";
+  }
+  88% {
+    content: "Larry D|";
+  }
+  90% {
+    content: "Larry Da|";
+  }
+  92% {
+    content: "Larry Dan|";
+  }
+  94% {
+    content: "Larry Dani|";
+  }
+  96% {
+    content: "Larry Danie|";
+  }
+  98% {
+    content: "Larry Daniel|";
+  }
+  100% {
+    content: "Larry Daniels|";
+  }
+}
+.title {
+  
+  
+ 
+  
+  h2 {
+    font-family: var(--main-font);
+    color: #343434;
+    background-image: url(../imgs/dots.png);
+    width: fit-content;
+  
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -2px;
+    font-weight: 800;
+  }
+  p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+/* start about */
+.about {
+  p {
+    font-family: var(--sec-font);
+  }
+  .cv-button {
+    transition: 0.3s all;
+  }
+  .cv-button:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 1px black solid;
+  }
+
+  .contact-btn {
+    transition: 0.3s;
+  }
+  .contact-btn:hover {
+    color: white !important;
+  }
+  .about-img{
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    
+  }
+  
+}
+/* end about */
+
+/* start services */
+.services {
+  background-color: #f7f7f7;
+
+  .card {
+    position: relative;
+  }
+  i {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+    padding: 6px;
+    transition: 0.5s all;
+  }
+}
+.card:hover i {
+  background-color: black;
+  color: white;
+}
+
+/* portfolio */
+.portfolio {
+  color: black;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-link {
+    color: black !important;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    font-family: var(--sec-font);
+    --bs-nav-tabs-link-active-border-color: black;
+    --bs-nav-tabs-link-active-bg: transparent;
+    border-bottom: none;
+    --bs-nav-tabs-border: none;
+    --bs-nav-tabs-border-width: none;
+    position: relative;
+
+    font-weight: 600;
+    font-family: var(--sec-font);
+  }
+  .nav-link:hover::after {
+    opacity: 1;
+  }
+  .nav-link::after {
+    content: "";
+    transition: all 0.3s;
+    opacity: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: black !important;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    margin-bottom: 5px;
+    transition: 0.3s;
+  }
+
+  .layer {
+    top: 10px;
+    left: 0;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    transition: all 0.3s;
+    span {
+      color: black;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i {
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      margin: 10px 5px;
+      transition: 0.3s all;
+    }
+  }
+  .items:hover .layer {
+    top: 0;
+    opacity: 0.8;
+    border: solid rgba(0, 0, 0, 0.2) 5px;
+
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  .layer i:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+/* testimonial */
+
+.testmonial {
+  background-color: #f7f7f7;
+
+  img {
+    width: 90px;
+  }
+  font-size: 14px;
+  [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #b4abab;
+  }
+  p,
+  span {
+    font-family: var(--sec-font);
+  }
+  span {
+    color: #999999 !important;
+  }
+  h5 {
+    color: #343434;
+    font-family: var(--main-font);
+  }
+  
+    
+  
+}
+
+
+/* our team */
+
+.ourteam {
+  background-color: #f7f7f7;
+
+  .card 
+  {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .card-body {
+    background-color: #5b5b5b !important;
+    overflow: hidden;
+  }
+  .team-imgs
+   {
+    overflow: hidden;
+    transition: all 0.3s;
+    
+  }
+  img 
+  {
+    transition: all 0.3s;
+  }
+
+  .team-imgs:hover img 
+  {
+    transform: scale(1.2);
+  }
+  .team-imgs:hover .team-social{
+    opacity: 1;
+
+  }
+
+  .team-social {
+    background-color: rgba(240, 240, 240, 0.9);
+    opacity: 0;
+    position: absolute;
+    width: 96%;
+   height: 96%;
+    margin: auto;
+
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+
+    i {
+       
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      margin: 0 5px;
+      transition: 0.3s all;
+       transform: rotateY(180deg);
+    }
+  }
+  .card:hover .team-social
+   {
+    opacity: 1;
+    transform: rotateY(180deg) ;
+  }
+ 
+}
+
+.team-social i:hover {
+  background-color: white;
+  color: black;
+ 
+}
+
+.contact {
+  i {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+    padding: 6px;
+    transition: 0.5s all;
+  }
+}
+.contact .item i:hover {
+  background-color: black;
+  color: white;
+}
+
+.user-input {
+  .form-control {
+    background-color: #f4f4f4;
+  }
+  .cv-button:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 1px black solid;
+  }
+  .form-control:focus
+  {
+    border: none;
+   
+    box-shadow: none;
+   outline: none;
+   
+  }
+}
+
+.footer {
+  color: #5b5b5b;
+}
+html{
+  scroll-padding-top: 40px;
+}
